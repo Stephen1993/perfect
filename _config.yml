@@ -2,14 +2,16 @@
 menu:
   主页: /
   所有文章: /archives
-  # 随笔: /tags/随笔
+  技术之美: /technology
+  产品之道: /product
+  生活杂谈: /life
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
+  github: "https://github.com/xyyh"
+  weibo: "http://weibo.com/u/5346438017/home?wvr=5&lf=reg"
+  rss: "/atom.xml"
+  zhihu: "https://www.zhihu.com/people/cang-ling-yang-30"
   #douban: "#"
   #mail: "#"
   #facebook: "#"
@@ -20,7 +22,7 @@ subnav:
 rss: /atom.xml
 
 # Content
-excerpt_link: more
+excerpt_link: 阅读全文
 fancybox: true
 mathjax: true
 
@@ -32,16 +34,16 @@ open_in_new: false
 
 # Miscellaneous
 google_analytics: ''
-favicon: /favicon.png
+favicon: /img/favicon.ico
 
 #你的头像url
-avatar:
+avatar: /img/xyyh_head.png
 #是否开启分享
 share_jia: true
 share_addthis: false
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
 #若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
-duoshuo: true
+duoshuo: xyyh2016
 #是否开启云标签
 tagcloud: true
 
@@ -50,15 +52,15 @@ tagcloud: true
 #friends: false
 #开启——
 friends:
-  奥巴马的博客: http://localhost:4000/
-  卡卡的美丽传说: http://localhost:4000/
-  本泽马的博客: http://localhost:4000/
-  吉格斯的博客: http://localhost:4000/
-  习大大大不同: http://localhost:4000/
-  托蒂的博客: http://localhost:4000/
+  xyb的博客: http://xybcoder.github.io/
+  舞影凌风: http://www.apkfuns.com/
 
 #是否开启“关于我”。
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+aboutme:
+  家乡: 江西抚州
+  学校: 华东交通大学
+  职业: 爱幻想的程序员
+  爱好: 放空自己，行走各地

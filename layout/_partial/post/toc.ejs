@@ -1,0 +1,31 @@
+<div id="toc" class="toc-article">
+    <%- toc(post.content, {list_number: true}) %>
+    <div class="toc-title">隐藏目录</div>
+</div>
+
+<script>
+$("#toc .toc-title").click(function() {
+    var textDire = $("#toc .toc");
+    if(textDire.attr("flag") === "hidden") {
+        textDire.fadeIn().attr("flag", "show");
+        $(this).text("隐藏目录").css({"border-left": "1px solid #ddd", "border-bottom": "1px solid #ddd"});
+    }else {
+        textDire.fadeOut().attr("flag", "hidden")
+        $(this).text("展开目录").css({"border-left": "0", "border-bottom": "0"});
+    }
+});
+
+var tocDom = $("#toc"),
+    tocTop = tocDom.offset().top,
+    sucFixed = false;
+window.addEventListener("scroll", function(){
+    var scrollTop = $(this).scrollTop();
+    if(!sucFixed && scrollTop > tocTop) {
+        tocDom.addClass('toc-fixed');
+        sucFixed = true;
+    }else if(sucFixed && scrollTop <= tocTop) {
+        tocDom.removeClass('toc-fixed');
+        sucFixed = false;
+    }
+});
+</script>

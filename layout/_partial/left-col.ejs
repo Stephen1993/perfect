@@ -41,12 +41,13 @@
 						</div>
 						<%}%>
 					</div>
-					
 				</div>
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
 						<li><%= __('menu.menu') %></li>
+						<li><%= __('menu.categories') %></li>
+						<li><%= __('menu.archives') %></li>
 						<li><%= __('menu.tags') %></li>
 						<%if(theme.friends && theme.friends.length != 0){%>
 						<li><%= __('menu.link') %></li>
@@ -78,8 +79,20 @@
 					</nav>
 				</section>
 				
-				<%if(theme.tagcloud){%>
 				<section class="switch-part switch-part2">
+					<div class="widget category" id="js-category">
+					    <%- list_categories() %>
+					</div>
+				</section>
+				
+				<section class="switch-part switch-part3">
+					<div class="widget archive" id="js-archive">
+					    <%- list_archives({format: "YYYY年MM月"}) %>
+					</div>
+				</section>
+                
+                <%if(theme.tagcloud){%>
+				<section class="switch-part switch-part4">
 					<div class="widget tagcloud" id="js-tagcloud">
 						<%- tagcloud() %>
 					</div>
@@ -87,8 +100,8 @@
 				<%}%>
 				
 				<%if(theme.friends && theme.friends.length != 0){%>
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
+				<section class="switch-part switch-part5">
+					<div id="js-friends" class="js-friends">
 					<% for (var i in theme.friends){ %>
 			          <a target="_blank" class="main-nav-link switch-friends-link" href="<%- url_for(theme.friends[i]) %>"><%= i %></a>
 			        <% } %>
@@ -97,12 +110,16 @@
 				<%}%>
 
 				<%if(theme.aboutme){%>
-				<%if(!theme.friends){%>
-				<section class="switch-part switch-part3">
+				<%if(!theme.friends || theme.friends.length == 0){%>
+				<section class="switch-part switch-part5">
 				<%}else{%>
-				<section class="switch-part switch-part4">
+				<section class="switch-part switch-part6">
 				<%}%>
-					<div id="js-aboutme"><%=theme.aboutme%></div>
+					<div id="js-aboutme">
+                     <% for (var i in theme.aboutme){ %>
+			          <p><%= i %>：<%=theme.aboutme[i]%></p>
+			         <% } %>
+                    </div>
 				</section>
 				<%}%>
 			</div>

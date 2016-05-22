@@ -271,13 +271,28 @@
 		left: 0;
 	}
     .switch-part2 {
-        left: 100%;    
+        left: 100%;
+        .category-list {
+            font-size: 14px;
+            line-height: 25px;
+            .category-list-count {
+                margin-left: 5px;
+                font-size: 14px;
+                color: #88acdb;
+                &:before {
+                    content: '(';
+                }
+                &:after {
+                    content: ')';
+                }
+            }
+        }
     }
     .switch-part3 {
         left: 200%;
         .archive-list {
             font-size: 14px;
-            line-height: 31px;
+            line-height: 25px;
             .archive-list-count {
                 margin-left: 5px;
                 font-size: 14px;

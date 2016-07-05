@@ -1,4 +1,5 @@
-hexo-theme-yilia
+本主题基于hexo-theme-yilia
+## v1.0介绍: 原版yilia
 
 Yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
 崇尚简约优雅，以及极致的性能。 你可以点击 [我的博客](http://litten.github.io/) 查看效果。           
@@ -136,3 +137,7 @@ aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜�
 ##五、其他
 
 [同步你的instagram图片](https://github.com/litten/hexo-theme-yilia/wiki/%E5%90%8C%E6%AD%A5%E4%BD%A0%E7%9A%84instagram%E5%9B%BE%E7%89%87)
+
+## v2.0: 增加文章统计，目录
+![具体看这](http://chenyangblog.com/technology/20160524/hexo-build.html)
+
